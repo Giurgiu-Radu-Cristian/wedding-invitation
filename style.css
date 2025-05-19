@@ -5,9 +5,10 @@
 }
 
 body, html {
-  height: auto; /* allow content to grow */
-  overflow-y: auto;
+  height: 100%;
   font-family: 'Georgia', serif;
+  overflow-x: auto; /* allow horizontal scroll */
+  overflow-y: auto;
 }
 
 /* Full-screen video background */
@@ -36,21 +37,20 @@ body, html {
 
 /* Invitation Card */
 .invitation {
-  position: relative;
+ position: relative;
   background-color: #fffaf8;
   background-image: url('gold-thread.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 90% auto; /* Shrinks width on small screens */
+  background-size: 90% auto;
   padding: 3rem;
   border-radius: 24px;
   text-align: center;
-  width: 90%;
-  max-width: 700px;
-  margin: 4rem auto;
+  width: 700px; /* force wider block */
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
   border: 6px solid #d4af37;
   z-index: 1;
+  margin: 4rem auto;
 }
 
 
@@ -115,9 +115,9 @@ body, html {
 /* Responsive */
 @media screen and (max-width: 480px) {
   .invitation {
-    padding: 1.5rem;
-    width: 90%;
+    width: 700px; /* maintain wide size */
   }
+
 
   .invitation h1 {
     font-size: 1.5em;
