@@ -4,12 +4,14 @@
   padding: 0;
 }
 
-body, html {
+html, body {
   height: 100%;
   font-family: 'Georgia', serif;
   overflow-x: auto; /* allow horizontal scroll */
   overflow-y: auto;
+  min-width: 700px; /* enforce wider minimum */
 }
+
 
 /* Full-screen video background */
 .background-video {
